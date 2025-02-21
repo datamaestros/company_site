@@ -3,149 +3,135 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IT Company - DATA MAESTROS TECHNOLOGY</title>
-    <link rel="stylesheet" href="styles.css">
+    <meta name="description" content="DATA MAESTROS TECHNOLOGY - Leading IT Solutions Provider. We specialize in Application Development, Digital Marketing, and Mobile App Development.">
+    <meta name="keywords" content="IT solutions, Application Development, Digital Marketing, Mobile App Development, Web Development, SEO, Software Company">
+    <meta name="author" content="DATA MAESTROS TECHNOLOGY">
+    <title>IT Solutions - DATA MAESTROS TECHNOLOGY | Web & Mobile Development</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
-            padding: 0;
-            text-align: center;
+            padding-top: 80px; /* Prevent overlap with fixed navbar */
         }
-        header {
-            background: #333;
-            color: white;
-            padding: 15px 0;
+        .navbar {
+            background-color: #343a40;
             position: fixed;
-            width: 100%;
             top: 0;
-            left: 0;
+            width: 100%;
             z-index: 1000;
         }
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0 20px;
-        }
-        nav ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            display: flex;
-        }
-        nav ul li {
-            margin: 0 20px;
-            padding: 10px 0;
-        }
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-            display: block;
-            padding: 10px;
-        }
-        .menu-toggle {
-            display: none;
-            font-size: 24px;
-            cursor: pointer;
+        .navbar-brand, .navbar-nav .nav-link {
             color: white;
         }
-        @media (max-width: 768px) {
-            nav ul {
-                display: none;
-                flex-direction: column;
-                position: absolute;
-                background: #333;
-                width: 100%;
-                top: 60px;
-                left: 0;
-                padding: 10px 0;
-            }
-            nav ul.show {
-                display: flex;
-            }
-            nav ul li {
-                margin: 10px 0;
-                padding: 15px;
-            }
-            .menu-toggle {
-                display: block;
-            }
+        .navbar-toggler {
+            border-color: rgba(255, 255, 255, 0.5);
         }
-        section {
-            padding: 100px 20px 80px;
+        .container {
+            padding-top: 20px;
         }
         .service {
-            margin: 20px auto;
-            max-width: 500px;
             background: #f4f4f4;
             padding: 20px;
             border-radius: 10px;
+            margin-bottom: 20px;
         }
         footer {
             background: #333;
             color: white;
             padding: 10px;
+            text-align: center;
+            width: 100%;
             position: relative;
             bottom: 0;
-            width: 100%;
+        }
+        /* Offset sections to prevent overlap with fixed navbar */
+        section {
+            scroll-margin-top: 80px;
         }
     </style>
 </head>
 <body>
-    <header>
-        <nav>
-            <h1>DATA MAESTROS TECHNOLOGY</h1>
-            <span class="menu-toggle">&#9776;</span>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About Us</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-    
-    <section id="home">
-        <h2>Welcome to DATA MAESTROS TECHNOLOGY</h2>
-        <p>Your trusted partner for IT solutions.</p>
-    </section>
-    
-    <section id="about">
-        <h2>About Us</h2>
-        <p>We provide cutting-edge IT solutions to help businesses thrive in the digital era.</p>
-    </section>
-    
-    <section id="services">
-        <h2>Our Services</h2>
-        <div class="service">
-            <h3>Application Design & Development</h3>
-            <p>We design and develop custom applications tailored to your business needs.</p>
+    <!-- Responsive Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">DATA MAESTROS</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
         </div>
-        <div class="service">
-            <h3>Digital Marketing</h3>
-            <p>Boost your brand's online presence with our expert digital marketing strategies.</p>
-        </div>
-        <div class="service">
-            <h3>Mobile App Development</h3>
-            <p>We create powerful and user-friendly mobile applications for iOS and Android.</p>
-        </div>
-    </section>
+    </nav>
     
-    <section id="contact">
-        <h2>Contact Us</h2>
-        <p>Email: datamaestrostech@gmail.com</p>
+    <div class="container">
+        <section id="home" class="mt-5">
+            <h1>Welcome to DATA MAESTROS TECHNOLOGY</h1>
+            <p>Your trusted partner for IT solutions, software development, and digital transformation.</p>
+        </section>
         
-    </section>
+        <section id="about" class="mt-5">
+            <h2>About Us</h2>
+            <p>We provide cutting-edge IT solutions to help businesses thrive in the digital era. Our expertise includes custom software development, web design, mobile app development, and SEO services.</p>
+        </section>
+        
+        <section id="services" class="mt-5">
+            <h2>Our Services</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="service p-3">
+                        <h3>Application Design & Development</h3>
+                        <p>We design and develop custom applications tailored to your business needs, ensuring high performance and scalability.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="service p-3">
+                        <h3>Digital Marketing & SEO</h3>
+                        <p>Boost your brand's online presence with our expert digital marketing strategies, including search engine optimization (SEO).</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="service p-3">
+                        <h3>Mobile App Development</h3>
+                        <p>We create powerful and user-friendly mobile applications for iOS and Android to enhance your business reach.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="contact" class="mt-5">
+            <h2>Contact Us</h2>
+            <p>Email: datamaestrostech@gmail.com</p>
+            <p>Location: India | Available for Global Projects</p>
+        </section>
+    </div>
     
-    <footer>
+    <footer class="mt-5">
         <p>&copy; 2025 DATA MAESTROS TECHNOLOGY, LLP. All rights reserved.</p>
     </footer>
-
+    
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script>
-        document.querySelector(".menu-toggle").addEventListener("click", function() {
-            document.querySelector("nav ul").classList.toggle("show");
+        document.addEventListener("DOMContentLoaded", function () {
+            const navLinks = document.querySelectorAll(".nav-link");
+            const navbarCollapse = document.querySelector(".navbar-collapse");
+            
+            navLinks.forEach(link => {
+                link.addEventListener("click", function () {
+                    if (window.innerWidth < 992) { // Hide only in mobile view
+                        const bsCollapse = new bootstrap.Collapse(navbarCollapse);
+                        bsCollapse.hide();
+                    }
+                });
+            });
         });
     </script>
 </body>
