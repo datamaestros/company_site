@@ -3,65 +3,109 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DATA MAESTROS TECHNOLOGY, LLP</title>
+    <title>IT Company - DATA MAESTROS TECHNOLOGY</title>
+    
     <style>
         body {
             font-family: Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
             text-align: center;
-            padding: 20px;
         }
-        .container {
-            background: white;
-            padding: 40px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        header {
+            background: #333;
+            color: white;
+            padding: 15px 0;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+        section {
+            padding: 50px 20px;
+        }
+        .service {
+            margin: 20px auto;
+            max-width: 500px;
+            background: #f4f4f4;
+            padding: 20px;
             border-radius: 10px;
         }
-        h1 {
-            color: #333;
+        footer {
+            background: #333;
+            color: white;
+            padding: 10px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
         }
-        p {
-            color: #666;
-        }
-        .countdown {
-            font-size: 20px;
-            font-weight: bold;
-            margin-top: 20px;
+        @media (max-width: 768px) {
+            nav ul {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            .service {
+                max-width: 100%;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>DATA MAESTROS TECHNOLOGY, LLP</h1>
-        <h2>Our Website is Under Construction</h2>
-        <p>We are working hard to bring you something amazing. Stay tuned!</p>
-        <p>Contact us at: <a href="mailto:datamaestrostech@gmail.com">datamaestrostech@gmail.com</a></p>
-        <div class="countdown" id="countdown"></div>
-    </div>
-    <script>
-        function updateCountdown() {
-            const targetDate = new Date("2025-06-01").getTime();
-            const now = new Date().getTime();
-            const difference = targetDate - now;
-            
-            const days = Math.floor(difference / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((difference % (1000 * 60)) / 1000);
-            
-            document.getElementById("countdown").innerHTML = `Launching in ${days}d ${hours}h ${minutes}m ${seconds}s`;
-            
-            if (difference < 0) {
-                document.getElementById("countdown").innerHTML = "We're Live!";
-            }
-        }
+    <header>
+        <h1>DATA MAESTROS TECHNOLOGY</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section id="home">
+        <h2>Welcome to DataMaestros Tech</h2>
+        <p>Your trusted partner for IT solutions.</p>
+    </section>
+    
+    <section id="about">
+        <h2>About Us</h2>
+        <p>We provide cutting-edge IT solutions to help businesses thrive in the digital era.</p>
+    </section>
+    
+    <section id="services">
+        <h2>Our Services</h2>
+        <div class="service">
+            <h3>Application Design & Development</h3>
+            <p>We design and develop custom applications tailored to your business needs.</p>
+        </div>
+        <div class="service">
+            <h3>Digital Marketing</h3>
+            <p>Boost your brand's online presence with our expert digital marketing strategies.</p>
+        </div>
+        <div class="service">
+            <h3>Mobile App Development</h3>
+            <p>We create powerful and user-friendly mobile applications for iOS and Android.</p>
+        </div>
+    </section>
+    
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>Email: datamaestrostech@gmail.com</p>
         
-        setInterval(updateCountdown, 1000);
-        updateCountdown();
-    </script>
+    </section>
+    
+    <footer>
+        <p>&copy; 2025 DATA MAESTROS TECHNOLOGY, LLP. All rights reserved.</p>
+    </footer>
 </body>
 </html>
