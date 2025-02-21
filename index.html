@@ -13,7 +13,7 @@
         body {
             font-family: Arial, sans-serif;
             margin: 0;
-            padding-top: 80px; /* Prevent overlap with fixed navbar */
+            padding-top: 80px;
         }
         .navbar {
             background-color: #343a40;
@@ -25,13 +25,10 @@
         .navbar-brand, .navbar-nav .nav-link {
             color: white;
         }
-        .navbar-toggler {
-            border-color: rgba(255, 255, 255, 0.5);
-        }
         .container {
             padding-top: 20px;
         }
-        .service {
+        .service, .career {
             background: #f4f4f4;
             padding: 20px;
             border-radius: 10px;
@@ -43,10 +40,7 @@
             padding: 10px;
             text-align: center;
             width: 100%;
-            position: relative;
-            bottom: 0;
         }
-        /* Offset sections to prevent overlap with fixed navbar */
         section {
             scroll-margin-top: 80px;
         }
@@ -65,6 +59,7 @@
                     <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="#about">About Us</a></li>
                     <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#careers">Careers</a></li>
                     <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
                 </ul>
             </div>
@@ -79,7 +74,7 @@
         
         <section id="about" class="mt-5">
             <h2>About Us</h2>
-            <p>We provide cutting-edge IT solutions to help businesses thrive in the digital era. Our expertise includes custom software development, web design, mobile app development, and SEO services.</p>
+            <p>We provide cutting-edge IT solutions to help businesses thrive in the digital era.</p>
         </section>
         
         <section id="services" class="mt-5">
@@ -88,21 +83,30 @@
                 <div class="col-md-4">
                     <div class="service p-3">
                         <h3>Application Design & Development</h3>
-                        <p>We design and develop custom applications tailored to your business needs, ensuring high performance and scalability.</p>
+                        <p>We design and develop custom applications tailored to your business needs.</p>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="service p-3">
                         <h3>Digital Marketing & SEO</h3>
-                        <p>Boost your brand's online presence with our expert digital marketing strategies, including search engine optimization (SEO).</p>
+                        <p>Boost your brand's online presence with our expert digital marketing strategies.</p>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="service p-3">
                         <h3>Mobile App Development</h3>
-                        <p>We create powerful and user-friendly mobile applications for iOS and Android to enhance your business reach.</p>
+                        <p>We create powerful and user-friendly mobile applications.</p>
                     </div>
                 </div>
+            </div>
+        </section>
+
+        <!-- Careers Section -->
+        <section id="careers" class="mt-5">
+            <h2>Careers</h2>
+            <p>We are looking for enthusiastic interns to join our team and gain hands-on experience with cutting-edge technologies. Our internship program provides an opportunity to explore real-world projects, enhance your skills, and build a strong foundation for your career in the IT industry.</p>
+            <div class="career p-3 text-center">
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSd2oLV0bGdcy2brbkZLL0tFtWMbLhj-JhcY4FOUCQ0rMirn9Q/viewform" target="_blank" class="btn btn-primary">Apply Now</a>
             </div>
         </section>
         
@@ -117,7 +121,7 @@
         <p>&copy; 2025 DATA MAESTROS TECHNOLOGY, LLP. All rights reserved.</p>
     </footer>
     
-    <!-- Bootstrap JS Bundle with Popper -->
+    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script>
         document.addEventListener("DOMContentLoaded", function () {
@@ -126,7 +130,7 @@
             
             navLinks.forEach(link => {
                 link.addEventListener("click", function () {
-                    if (window.innerWidth < 992) { // Hide only in mobile view
+                    if (window.innerWidth < 992) {
                         const bsCollapse = new bootstrap.Collapse(navbarCollapse);
                         bsCollapse.hide();
                     }
