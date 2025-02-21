@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IT Company - Under Construction</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+            text-align: center;
+            padding: 20px;
+        }
+        .container {
+            background: white;
+            padding: 40px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+        h1 {
+            color: #333;
+        }
+        p {
+            color: #666;
+        }
+        .countdown {
+            font-size: 20px;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Our Website is Under Construction</h1>
+        <p>We are working hard to bring you something amazing. Stay tuned!</p>
+        <p>Contact us at: <a href="mailto:info@itcompany.com">info@itcompany.com</a></p>
+        <div class="countdown" id="countdown"></div>
+    </div>
+    <script>
+        function updateCountdown() {
+            const targetDate = new Date("2025-06-01").getTime();
+            const now = new Date().getTime();
+            const difference = targetDate - now;
+            
+            const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+            
+            document.getElementById("countdown").innerHTML = `Launching in ${days}d ${hours}h ${minutes}m ${seconds}s`;
+            
+            if (difference < 0) {
+                document.getElementById("countdown").innerHTML = "We're Live!";
+            }
+        }
+        
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
+    </script>
+</body>
+</html>
