@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IT Company - DATA MAESTROS TECHNOLOGY</title>
-    
+    <link rel="stylesheet" href="styles.css">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -16,21 +16,65 @@
             background: #333;
             color: white;
             padding: 15px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
         }
         nav ul {
             list-style: none;
             padding: 0;
+            margin: 0;
+            display: flex;
         }
         nav ul li {
-            display: inline;
-            margin: 0 15px;
+            margin: 0 20px;
+            padding: 10px 0;
         }
         nav ul li a {
             color: white;
             text-decoration: none;
+            font-weight: bold;
+            display: block;
+            padding: 10px;
+        }
+        .menu-toggle {
+            display: none;
+            font-size: 24px;
+            cursor: pointer;
+            color: white;
+        }
+        @media (max-width: 768px) {
+            nav ul {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                background: #333;
+                width: 100%;
+                top: 60px;
+                left: 0;
+                padding: 10px 0;
+            }
+            nav ul.show {
+                display: flex;
+            }
+            nav ul li {
+                margin: 10px 0;
+                padding: 15px;
+            }
+            .menu-toggle {
+                display: block;
+            }
         }
         section {
-            padding: 50px 20px;
+            padding: 100px 20px 80px;
         }
         .service {
             margin: 20px auto;
@@ -47,22 +91,13 @@
             bottom: 0;
             width: 100%;
         }
-        @media (max-width: 768px) {
-            nav ul {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-            }
-            .service {
-                max-width: 100%;
-            }
-        }
     </style>
 </head>
 <body>
     <header>
-        <h1>DATA MAESTROS TECHNOLOGY</h1>
         <nav>
+            <h1>DATA MAESTROS TECHNOLOGY</h1>
+            <span class="menu-toggle">&#9776;</span>
             <ul>
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About Us</a></li>
@@ -73,7 +108,7 @@
     </header>
     
     <section id="home">
-        <h2>Welcome to DataMaestros Tech</h2>
+        <h2>Welcome to DATA MAESTROS TECHNOLOGY</h2>
         <p>Your trusted partner for IT solutions.</p>
     </section>
     
@@ -107,5 +142,11 @@
     <footer>
         <p>&copy; 2025 DATA MAESTROS TECHNOLOGY, LLP. All rights reserved.</p>
     </footer>
+
+    <script>
+        document.querySelector(".menu-toggle").addEventListener("click", function() {
+            document.querySelector("nav ul").classList.toggle("show");
+        });
+    </script>
 </body>
 </html>
